@@ -1,14 +1,4 @@
-# Object-differ
-Node module to update deep objects and get notified about changes
-
-## Install
-```javascript
-$ npm install object-differ
-```
-
-## Example
-```javascript
-var differ = require('object-differ');
+var differ = require('../index.js');
 
 var obj = {
     'This': 'is',
@@ -30,4 +20,3 @@ differ(obj, update, function(key, value, old, path) {
     console.log('Changed', key, 'from', old, 'to', value);
     // OUTPUT: Changed test from object to that isn't
 });
-```

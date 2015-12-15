@@ -1,0 +1,25 @@
+{
+  "name": "object-differ",
+  "version": "0.1.0",
+  "description": "Update deep objects and get notified about changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schroffl/object-differ.git"
+  },
+  "keywords": [
+    "object",
+    "deep",
+    "recursive",
+    "update"
+  ],
+  "author": "schroffl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schroffl/object-differ/issues"
+  },
+  "homepage": "https://github.com/schroffl/object-differ#readme"
+}
