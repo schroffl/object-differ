@@ -12,15 +12,12 @@ var obj = {
 
 var update = {
     'a': {
-        'test': 'that isn\'t'
-    },
-    'abc': {
-        'asd': '123'
+        'test': 'that isn\t'
     }
 };
 
 var updateStart = process.hrtime();
-differ(obj, update);
+differ(obj, update,  null, true, false);
 
 var updateDiff = process.hrtime(updateStart);
 var codeDiff = process.hrtime(codeStart);
