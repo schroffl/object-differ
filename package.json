@@ -1,6 +1,6 @@
 {
   "name": "object-differ",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Update deep objects and get notified about changes",
   "main": "index.js",
   "scripts": {
