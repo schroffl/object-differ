@@ -8,9 +8,11 @@ function differObject(curr, repl, callbackFunction, notifyObjects, path) {
                 if(typeof repl[key] === 'object') {
                     newPath.push(key);
 
-                    if(typeof curr[key] === 'object') differObject(curr[key], repl[key], callbackFunction, notifyObjects, newPath);
-                    else if(typeof curr[key] !== 'object') {
-                        if(notifyObjects) callbackFunction(key, repl[key], curr[key], newPath);
+                    if(typeof curr[key] === 'object') {
+                        if(notifyObjects && typeof callbackFunction === 'function') callbackFunction(key, repl[key], curr[key], path);
+                        differObject(curr[key], repl[key], callbackFunction, notifyObjects, newPath);
+                    } else if(typeof curr[key] !== 'object') {
+                        if(notifyObjects && typeof callbackFunction === 'function') callbackFunction(key, repl[key], curr[key], path);
                         differObject((curr[key] = {}), repl[key], callbackFunction, notifyObjects, newPath);
                     }
                 } else {

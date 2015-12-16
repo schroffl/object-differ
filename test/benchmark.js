@@ -13,6 +13,9 @@ var obj = {
 var update = {
     'a': {
         'test': 'that isn\'t'
+    },
+    'abc': {
+        'asd': '123'
     }
 };
 
