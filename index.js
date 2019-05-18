@@ -90,7 +90,7 @@ function differ(previous, replace, callback, objectNotify, strict, path) {
                         newPath.push(key);
 
                         if(objectNotify) propagateChange(callback, key, undefined, previous[key], path);
-                        differ(previous[key], {}, callback, notifyObjects, strict, newPath);
+                        differ(previous[key], {}, callback, objectNotify, strict, newPath);
 
                     // It's a primitive value => Go straight ahead
                     } else {
